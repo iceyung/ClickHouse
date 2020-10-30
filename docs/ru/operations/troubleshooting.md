@@ -1,3 +1,8 @@
+---
+toc_priority: 46
+toc_title: "\u0423\u0441\u0442\u0440\u0430\u043d\u0435\u043d\u0438\u0435\u0020\u043d\u0435\u0438\u0441\u043f\u0440\u0430\u0432\u043d\u043e\u0441\u0442\u0435\u0439"
+---
+
 # Устранение неисправностей {#ustranenie-neispravnostei}
 
 -   [Установка дистрибутива](#troubleshooting-installation-errors)
@@ -7,10 +12,10 @@
 
 ## Установка дистрибутива {#troubleshooting-installation-errors}
 
-### Не получается скачать deb-пакеты из репозитория ClickHouse с помощью apt-get {#ne-poluchaetsia-skachat-deb-pakety-iz-repozitoriia-clickhouse-s-pomoshchiu-apt-get}
+### Не получается скачать deb-пакеты из репозитория ClickHouse с помощью Apt-get {#ne-poluchaetsia-skachat-deb-pakety-iz-repozitoriia-clickhouse-s-pomoshchiu-apt-get}
 
 -   Проверьте настройки брандмауэра.
--   Если по какой-либо причине вы не можете получить доступ к репозиторию, скачайте пакеты как описано в разделе [Начало работы](../getting_started/index.md) и установите их вручную командой `sudo dpkg -i <packages>`. Также, необходим пакет `tzdata`.
+-   Если по какой-либо причине вы не можете получить доступ к репозиторию, скачайте пакеты как описано в разделе [Начало работы](../getting-started/index.md) и установите их вручную командой `sudo dpkg -i <packages>`. Также, необходим пакет `tzdata`.
 
 ## Соединение с сервером {#troubleshooting-accepts-no-connections}
 
@@ -98,7 +103,7 @@ $ sudo -u clickhouse /usr/bin/clickhouse-server --config-file /etc/clickhouse-se
 
 -   Параметры endpoint.
 
-        Проверьте настройки [listen_host](server_settings/settings.md#server_settings-listen_host) и [tcp_port](server_settings/settings.md#server_settings-tcp_port).
+        Проверьте настройки [listen_host](server_configuration_parameters/settings.md#server_configuration_parameters-listen_host) и [tcp_port](server_configuration_parameters/settings.md#server_configuration_parameters-tcp_port).
 
         По умолчанию, сервер ClickHouse принимает только локальные подключения.
 

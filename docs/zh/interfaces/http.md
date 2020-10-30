@@ -17,13 +17,13 @@ Ok.
 
 当使用 GET 方法请求时，`readonly` 会被设置。换句话说，若要作修改数据的查询，只能发送 POST 方法的请求。可以将查询通过 POST 主体发送，也可以通过 URL 参数发送。
 
-Examples:
+例:
 
 ``` bash
 $ curl 'http://localhost:8123/?query=SELECT%201'
 1
 
-$ wget -O- -q 'http://localhost:8123/?query=SELECT 1'
+$ wget -nv -O- 'http://localhost:8123/?query=SELECT 1'
 1
 
 $ GET 'http://localhost:8123/?query=SELECT 1'
@@ -196,11 +196,11 @@ $ echo 'SELECT number FROM system.numbers LIMIT 10' | curl 'http://localhost:812
 
 相比起 TCP 原生接口，HTTP 接口不支持会话和会话设置的概念，不允许中止查询（准确地说，只在少数情况下允许），不显示查询处理的进展。执行解析和数据格式化都是在服务端处理，网络上会比 TCP 原生接口更低效。
 
-可选的 `query_id` 参数可能当做 query ID 传入（或者任何字符串）。更多信息，参见 «[设置 replace\_running\_query](../operations/settings/settings.md)» 部分。
+可选的 `query_id` 参数可能当做 query ID 传入（或者任何字符串）。更多信息，参见 «[设置 replace_running_query](../operations/settings/settings.md)» 部分。
 
 可选的 `quota_key` 参数可能当做 quota key 传入（或者任何字符串）。更多信息，参见 «[配额](../operations/quotas.md#quotas)» 部分。
 
-HTTP 接口允许传入额外的数据（外部临时表）来查询。更多信息，参见 «[外部数据查询处理](../operations/table_engines/external_data.md)» 部分。
+HTTP 接口允许传入额外的数据（外部临时表）来查询。更多信息，参见 «[外部数据查询处理](../engines/table-engines/special/external-data.md)» 部分。
 
 ## 响应缓冲 {#xiang-ying-huan-chong}
 

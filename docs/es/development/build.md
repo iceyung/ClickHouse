@@ -1,8 +1,15 @@
+---
+machine_translated: true
+machine_translated_rev: 72537a2d527c63c07aa5d2361a8829f3895cf2bd
+toc_priority: 64
+toc_title: "C\xF3mo crear ClickHouse en Linux"
+---
+
 # Cómo construir ClickHouse para el desarrollo {#how-to-build-clickhouse-for-development}
 
 El siguiente tutorial se basa en el sistema Ubuntu Linux.
 Con los cambios apropiados, también debería funcionar en cualquier otra distribución de Linux.
-Plataformas compatibles: x86\_64 y AArch64. El soporte para Power9 es experimental.
+Plataformas compatibles: x86_64 y AArch64. El soporte para Power9 es experimental.
 
 ## Instalar Git, CMake, Python y Ninja {#install-git-cmake-python-and-ninja}
 
@@ -60,13 +67,13 @@ $ cd ..
 ```
 
 Para crear un ejecutable, ejecute `ninja clickhouse`.
-Esto creará el `dbms/programs/clickhouse` ejecutable, que se puede usar con `client` o `server` argumento.
+Esto creará el `programs/clickhouse` ejecutable, que se puede usar con `client` o `server` argumento.
 
 # Cómo construir ClickHouse en cualquier Linux {#how-to-build-clickhouse-on-any-linux}
 
 La compilación requiere los siguientes componentes:
 
--   Git (se usa solo para pagar las fuentes, no es necesario para la compilación)
+-   Git (se usa solo para verificar las fuentes, no es necesario para la compilación)
 -   CMake 3.10 o más reciente
 -   Ninja (recomendado) o Hacer
 -   Compilador de C ++: gcc 9 o clang 8 o más reciente
@@ -95,13 +102,13 @@ Ejemplo de OpenSUSE Tumbleweed:
 Ejemplo de Fedora Rawhide:
 
     sudo yum update
-    yum --nogpg install git cmake make gcc-c++ python2
+    yum --nogpg install git cmake make gcc-c++ python3
     git clone --recursive https://github.com/ClickHouse/ClickHouse.git
     mkdir build && cd build
     cmake ../ClickHouse
     make -j $(nproc)
 
-# Usted no tiene que construir ClickHouse {#you-dont-have-to-build-clickhouse}
+# No tienes que construir ClickHouse {#you-dont-have-to-build-clickhouse}
 
 ClickHouse está disponible en binarios y paquetes preconstruidos. Los binarios son portátiles y se pueden ejecutar en cualquier tipo de Linux.
 
@@ -131,4 +138,4 @@ $ cd ClickHouse
 $ ./release
 ```
 
-[Artículo Original](https://clickhouse.tech/docs/es/development/build/) <!--hide-->
+[Artículo Original](https://clickhouse.tech/docs/en/development/build/) <!--hide-->

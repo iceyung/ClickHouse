@@ -24,7 +24,7 @@ cd ClickHouse
 
 以下教程是在 Ubuntu Linux 中进行编译的示例。
 通过适当的更改，它应该可以适用于任何其他的 Linux 发行版。
-仅支持具有 x86\_64、AArch64。 对 Power9 的支持是实验性的。
+仅支持具有 x86_64、AArch64。 对 Power9 的支持是实验性的。
 
 ## 安装 Git 和 CMake 和 Ninja {#an-zhuang-git-he-cmake-he-ninja}
 
@@ -32,12 +32,12 @@ cd ClickHouse
 sudo apt-get install git cmake ninja-build
 ```
 
-Or cmake3 instead of cmake on older systems.
+或cmake3而不是旧系统上的cmake。
 或者在早期版本的系统中用 cmake3 替代 cmake
 
 ## 安装 GCC 9 {#an-zhuang-gcc-9}
 
-There are several ways to do this.
+有几种方法可以做到这一点。
 
 ### 安装 PPA 包 {#an-zhuang-ppa-bao}
 
@@ -79,6 +79,6 @@ cd ..
 ```
 
 若要创建一个执行文件， 执行 `ninja clickhouse`。
-这个命令会使得 `dbms/programs/clickhouse` 文件可执行，您可以使用 `client` or `server` 参数运行。
+这个命令会使得 `programs/clickhouse` 文件可执行，您可以使用 `client` 或 `server` 参数运行。
 
 [来源文章](https://clickhouse.tech/docs/en/development/build/) <!--hide-->
